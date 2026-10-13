@@ -53,6 +53,9 @@
   function playIntro(song) {
     stopMusic();
 
+    audio.src = song.audio;
+    audio.currentTime = 0;
+
     const playButton = document.getElementById("songQuizPlay");
 
     audio.play().then(() => {
@@ -72,10 +75,6 @@
     answered = false;
 
     const song = questions[questionIndex];
-
-    // 모바일 재생을 위해 문제 표시 시 음악 파일 준비
-    audio.src = song.audio;
-    audio.load();
 
     const wrongAnswers = [...SONG_QUIZ_DATA]
       .filter(item => item.title !== song.title)

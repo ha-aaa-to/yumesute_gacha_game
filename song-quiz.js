@@ -37,36 +37,85 @@
   }
 
   const audio = new Audio();
+  audio.preload = "auto";
+
   let playbackTimer = null;
+  let playbackRequest = 0;
   let answered = false;
 
   function stopMusic() {
+    playbackRequest++;
     clearTimeout(playbackTimer);
     playbackTimer = null;
+
     audio.pause();
-    audio.currentTime = 0;
+
+    try {
+      audio.currentTime = 0;
+    } catch (error) {
+      console.warn("재생 위치 초기화 실패:", error);
+    }
 
     const playButton = document.getElementById("songQuizPlay");
-    if (playButton) playButton.textContent = "▶";
+    if (playButton) {
+      playButton.textContent = "▶";
+      playButton.disabled = false;
+    }
   }
 
   function playIntro(song) {
     stopMusic();
 
-    audio.src = song.audio;
-    audio.currentTime = 0;
-
+    const request = playbackRequest;
     const playButton = document.getElementById("songQuizPlay");
 
-    audio.play().then(() => {
-      if (playButton) playButton.textContent = "Ⅱ";
+    if (!playButton) return;
+
+    let message = document.getElementById("songQuizAudioError");
+
+    if (!message) {
+      message = document.createElement("p");
+      message.id = "songQuizAudioError";
+      message.style.color = "#d94b65";
+      message.style.fontSize = "13px";
+      message.style.margin = "8px 0";
+      playButton.insertAdjacentElement("afterend", message);
+    }
+
+    message.textContent = "";
+    playButton.textContent = "読み込み中…";
+    playButton.disabled = true;
+
+    if (audio.getAttribute("src") !== song.audio) {
+      audio.src = song.audio;
+    }
+
+    let promise;
+
+    try {
+      promise = audio.play();
+    } catch (error) {
+      promise = Promise.reject(error);
+    }
+
+    Promise.resolve(promise).then(() => {
+      if (request !== playbackRequest || answered) return;
+
+      playButton.textContent = "Ⅱ";
+      playButton.disabled = false;
 
       playbackTimer = setTimeout(() => {
-        stopMusic();
+        if (request === playbackRequest) stopMusic();
       }, 5000);
+
     }).catch(error => {
-      stopMusic();
-      console.warn("음악 재생 실패:", error);
+      if (request !== playbackRequest || answered) return;
+
+      console.warn("음악 재생 실패:", song.title, error);
+
+      playButton.textContent = "▶";
+      playButton.disabled = false;
+      message.textContent = "再生できませんでした。もう一度お試しください。";
     });
   }
 
@@ -75,6 +124,9 @@
     answered = false;
 
     const song = questions[questionIndex];
+
+    // 문제별 음악 파일을 준비하되 load()는 호출하지 않음
+    audio.src = song.audio;
 
     const wrongAnswers = [...SONG_QUIZ_DATA]
       .filter(item => item.title !== song.title)

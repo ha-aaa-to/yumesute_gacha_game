@@ -29,6 +29,9 @@ aria-label="タイトル画面に戻る">ユメステガチャゲーム</button>
     </button>
 
     <div id="easterReveal" class="easter-reveal" aria-hidden="true">
+      <button type="button" class="easter-mobile-close"
+              aria-label="閉じる"
+              onclick="document.getElementById('easterTrigger').click()">×</button>
 
       <div class="easter-message">
         <strong>プレイ中、問題がございましたらご報告ください！<br>
@@ -388,19 +391,45 @@ aria-label="タイトル画面に戻る">ユメステガチャゲーム</button>
 
       <h2 class="dugong-song-select-title">動くジュゴンに降るノーツ</h2>
 
+      <p class="dugong-chart-disclaimer">※ 実際のゲームの譜面とは関係ありません。</p>
+
       <p class="dugong-song-select-label">楽曲選択</p>
 
-      <div class="dugong-song-list">
+      <!-- DUGONG SONG DETAIL UI V1 -->
+      <div class="dugong-selection-layout">
+        <div class="dugong-song-sort">
+          
+          <select id="dugongSongSort">
+            <option value="number">デフォルト</option>
+            <option value="level-asc">難易度 24 → 31</option>
+            <option value="level-desc">難易度 31 → 24</option>
+          </select>
+        </div>
+        <div class="dugong-song-list">
+          <button type="button" class="dugong-song-item active"
+                  data-dugong-song="iroha-blooming" data-song-number="66" data-song-level="24">
+            <img class="dugong-song-level"
+                 src="assets/dugong-charts/24.png" alt="STELLA 24">
+            <span class="dugong-song-name">いろはうたBLOOMING</span>
+          </button>
+          <button type="button" class="dugong-song-item"
+                  data-dugong-song="wannavista" data-song-number="1" data-song-level="25">
+            <img class="dugong-song-level"
+                 src="assets/dugong-charts/25.png" alt="STELLA 25">
+            <span class="dugong-song-name">ワナビスタ！</span>
+          </button>
+          
+        </div>
 
-        <button
-          type="button"
-          class="dugong-song-item"
-          data-dugong-song="iroha-blooming">
-          <span class="dugong-song-name">いろはうたBLOOMING</span>
-        </button>
-
+        <div class="dugong-song-detail" hidden>
+          <img id="dugongSelectedCover"
+               src="assets/game/いろはうたBLOOMING/いろはうたBLOOMING.png" alt="楽曲ジャケット">
+          <strong id="dugongSelectedTitle">いろはうたBLOOMING</strong>
+          <img id="dugongSelectedLevel"
+               src="assets/dugong-charts/24.png" alt="STELLA 24">
+          <button type="button" id="dugongSongPlay">PLAY</button>
+        </div>
       </div>
-
     </div>
 
 
@@ -521,6 +550,11 @@ aria-label="タイトル画面に戻る">ユメステガチャゲーム</button>
        class="minigame-content-panel"
        hidden>
     <h2>この曲は何？</h2>
+
+    <div id="songQuizApp" class="song-quiz-app">
+      <div id="songQuizBody"></div>
+    </div>
+
   </div>
 
   <div id="robotMiniGameContent"
@@ -730,7 +764,12 @@ aria-label="タイトル画面に戻る">ユメステガチャゲーム</button>
   </div>
 </div>
 
-<div id="modal" class="modal" hidden><div class="dialog"><button id="close" aria-label="닫기">×</button><img id="big" alt="포토 크게 보기"><div class="meta"><div id="modalStars"></div><strong id="modalTitle"></strong><span>鳳ここな</span></div><button id="awaken" class="awaken-arrow" type="button" aria-label="각성 일러스트 전환" title="일러스트 전환"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.5A9 9 0 1 0 21 14"/><path d="M20.5 3.8v4.7h-4.7"/></svg></button></div></div><script src="cards.js"></script><script src="assets/dugong-charts/066/generated/066-full-chart.js"></script><script src="assets/dugong-charts/066/generated/066-color-map.js"></script>
+<div id="modal" class="modal" hidden><div class="dialog"><button id="close" aria-label="닫기">×</button><img id="big" alt="포토 크게 보기"><div class="meta"><div id="modalStars"></div><strong id="modalTitle"></strong><span>鳳ここな</span></div><button id="awaken" class="awaken-arrow" type="button" aria-label="각성 일러스트 전환" title="일러스트 전환"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.5A9 9 0 1 0 21 14"/><path d="M20.5 3.8v4.7h-4.7"/></svg></button></div></div><script src="cards.js"></script><script src="assets/dugong-charts/066/generated/066-full-chart.js"></script><script src="assets/dugong-charts/066/generated/066-color-map.js"></script><script src="assets/dugong-charts/001/generated/001-chart-v1.js"></script>
 <script src="item-assets.js"></script>
+<script src="assets/dugong-charts/auto/iroha-blooming-2.js"></script>
 <script src="script.js"></script>
+<script src="dugong-creator-popup.js"></script>
+<script src="dugong-song-sort.js"></script>
+  <script src="song-quiz-data.js"></script>
+  <script src="song-quiz.js"></script>
 </body></html>

@@ -6514,3 +6514,1267 @@ textarea {
 
 }
 
+
+/* ===== SONG QUIZ START UI ===== */
+
+#songMiniGameContent .song-quiz-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  min-height: 300px;
+  width: 100%;
+}
+
+#songMiniGameContent .song-quiz-start p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.7;
+}
+
+#songQuizStartButton {
+  display: block;
+  margin: 20px auto 0;
+  padding: 14px 56px;
+  background: #4fd2c7;
+  color: #173c3a;
+  border: none;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#songQuizStartButton:hover {
+  background: #38bfb4;
+  transform: scale(1.04);
+}
+
+
+/* ===== SONG QUIZ QUESTION UI ===== */
+
+#songMiniGameContent .song-quiz-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+#songMiniGameContent .song-quiz-question h3,
+#songMiniGameContent .song-quiz-question p {
+  margin: 0;
+  text-align: center;
+}
+
+#songQuizPlay {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 0;
+  border: 3px solid #4fd2c7;
+  border-radius: 50%;
+  background: white;
+  color: #229f95;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#songQuizPlay:hover {
+  background: #e5faf7;
+}
+
+#songQuizOptions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#songQuizOptions .song-quiz-option {
+  min-height: 70px;
+  padding: 12px;
+  border: 2px solid #bcebe5;
+  border-radius: 12px;
+  background: white;
+  color: #253c39;
+  font: inherit;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+#songQuizOptions .song-quiz-option:hover:not(:disabled) {
+  background: #e5faf7;
+}
+
+#songQuizOptions .song-quiz-option.correct {
+  background: #d7f5df;
+  border-color: #35a765;
+}
+
+#songQuizOptions .song-quiz-option.wrong {
+  background: #ffe0e0;
+  border-color: #db5353;
+}
+
+#songQuizReveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 24px auto;
+  text-align: center;
+}
+
+#songQuizReveal[hidden] {
+  display: none !important;
+}
+
+#songQuizReveal img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@media (max-width: 520px) {
+  #songQuizOptions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== SONG QUIZ COVER PLAYER ===== */
+
+#songQuizCover {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+
+/* ===== SONG QUIZ NEXT & RESULT UI ===== */
+
+#songQuizNext,
+#songQuizRestart {
+  display: block;
+  margin: 18px auto 0;
+  padding: 14px 54px;
+  border: none;
+  border-radius: 12px;
+  background: #4fd2c7;
+  color: #173c3a;
+  font: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#songQuizNext:hover,
+#songQuizRestart:hover {
+  background: #38bfb4;
+  transform: scale(1.04);
+}
+
+#songMiniGameContent .song-quiz-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+  min-height: 340px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#songMiniGameContent .song-quiz-result h3,
+#songMiniGameContent .song-quiz-result p {
+  margin: 0;
+  text-align: center;
+}
+
+#songMiniGameContent .song-quiz-result h3 {
+  font-size: 32px;
+}
+
+
+/* ===== SONG QUIZ REWARD ICON ===== */
+
+#songMiniGameContent .song-quiz-reward {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#songMiniGameContent .song-quiz-reward img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+
+
+/* ===== DUGONG VERTICAL SONG LIST ===== */
+#dugongSongList .dugong-song-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+#dugongSongList .dugong-song-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: min(100%, 420px) !important;
+  min-width: 0 !important;
+}
+#dugongSongList .dugong-song-level {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+/* DUGONG SONG LEVEL IMAGE VISIBILITY FIX */
+#dugongSongList .dugong-song-level {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 54px !important;
+  height: 54px !important;
+  flex: 0 0 54px !important;
+}
+
+/* RESTART is only visible after a game result */
+#dugongRestartButton:not(.visible) {
+  display: none !important;
+}
+
+
+/* DUGONG SONG DETAIL UI V1 */
+#dugongSongList .dugong-selection-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+#dugongSongList .dugong-song-list {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  max-height: 440px;
+  overflow-y: auto;
+  gap: 10px !important;
+}
+#dugongSongList .dugong-song-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+#dugongSongList .dugong-song-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f5f3fc;
+}
+#dugongSelectedCover {
+  display: block;
+  width: min(100%, 240px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+#dugongSelectedTitle {
+  font-size: 20px;
+  text-align: center;
+}
+#dugongSelectedLevel {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+#dugongSongPlay {
+  width: 100%;
+  max-width: 240px;
+  padding: 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #5541b5;
+  color: white;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  #dugongSongList .dugong-selection-layout {
+    grid-template-columns: 1fr;
+  }
+  #dugongSongList .dugong-song-list {
+    max-height: 260px;
+  }
+}
+
+
+/* DUGONG SONG DETAIL HIDDEN FIX */
+#dugongSongList .dugong-song-detail[hidden] {
+  display: none !important;
+}
+
+/* 듀공 게임 - 실제 채보와 무관함 안내 */
+#dugongSongList .dugong-chart-disclaimer {
+  margin: 4px 0 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #999;
+  text-align: left;
+}
+
+
+/* DUGONG SONG SORT */
+#dugongSongList .dugong-song-sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+#dugongSongSort {
+  padding: 8px 12px;
+  border: 1px solid #d9d9e2;
+  border-radius: 10px;
+  background: white;
+  color: #444;
+  font: inherit;
+  cursor: pointer;
+}
+
+#dugongSongSort:focus {
+  outline: 2px solid #4fd2c7;
+  outline-offset: 2px;
+}
+
+
+/* DUGONG SORT POSITION FIX */
+#dugongSongList .dugong-selection-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+#dugongSongList .dugong-song-sort {
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+#dugongSongList .dugong-song-list {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#dugongSongList .dugong-song-detail {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+@media (max-width: 650px) {
+  #dugongSongList .dugong-selection-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #dugongSongList .dugong-song-sort {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #dugongSongList .dugong-song-list {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #dugongSongList .dugong-song-detail {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+
+/* MOBILE UI STEP 1 - MAIN NAVIGATION */
+@media (max-width: 600px) {
+  .main-navigation {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .main-navigation .main-nav-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 10px 2px !important;
+    border-radius: 12px !important;
+    white-space: normal !important;
+  }
+
+  .main-navigation .main-nav-en {
+    font-size: 9px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .main-navigation .main-nav-jp {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+}
+
+
+/* MOBILE UI STEP 2 - TITLE */
+@media (max-width: 600px) {
+  .title-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .title-row h1 {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .title-row .title-home {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    font-size: clamp(17px, 5.1vw, 21px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.5px !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+
+  .title-row .easter-egg {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    min-width: 0 !important;
+  }
+
+  .title-row .easter-trigger {
+    width: 42px !important;
+    max-width: 42px !important;
+  }
+}
+
+
+
+
+/* MOBILE CREATOR POPUP V2 */
+.easter-mobile-close {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .easter-egg.open .easter-reveal {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    transform: none !important;
+    background: rgba(0,0,0,.45);
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .easter-egg.open .easter-message {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: min(100%, 340px) !important;
+    max-height: 75dvh;
+    overflow-y: auto !important;
+    padding: 56px 20px 24px !important;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.2);
+    white-space: normal !important;
+    text-align: center;
+    opacity: 1 !important;
+    z-index: 2;
+  }
+
+  .easter-egg.open .easter-right {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: calc(50% - 110px) !important;
+    width: 72px !important;
+    height: 72px !important;
+    transform: translateX(-50%) !important;
+    opacity: 1 !important;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .easter-egg.open .easter-mobile-close {
+    display: grid !important;
+    place-items: center;
+    position: absolute;
+    top: calc(50% - 125px);
+    right: max(24px, calc((100vw - 340px) / 2 + 10px));
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #f4f2f8;
+    color: #444;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 4;
+  }
+}
+
+
+/* MOBILE UI STEP 3 - UTILITY ROW */
+@media (max-width: 600px) {
+  .top-utility-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .top-utility-left {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .top-utility-right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    gap: 6px !important;
+  }
+
+  .top-utility-right .jewel-shop-button {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0 !important;
+  }
+
+  .top-utility-right .currency-display {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: 130px !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* MOBILE UTILITY VERTICAL ALIGN FIX */
+@media (max-width: 600px) {
+  .top-utility-row {
+    align-items: center !important;
+  }
+
+  .top-utility-left,
+  .top-utility-right {
+    align-self: center !important;
+  }
+
+  .top-utility-left .gift-box-button {
+    transform: translateY(0) !important;
+  }
+
+  .top-utility-right .jewel-shop-button {
+    transform: translateY(0) !important;
+  }
+}
+
+
+/* MOBILE UI STEP 4 - COMPACT GACHA */
+@media (max-width: 600px) {
+
+  /* 가챠 종류 선택 */
+  #gachaSubNavigation {
+    gap: 7px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #gachaSubNavigation .gacha-tab {
+    min-height: 56px !important;
+    height: 56px !important;
+    padding: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  #gachaSubNavigation .gacha-tab img {
+    max-width: 90% !important;
+    max-height: 38px !important;
+    object-fit: contain !important;
+  }
+
+  /* 가챠 설명 */
+  #gachaScreen .banner {
+    padding: 15px !important;
+    margin-bottom: 14px !important;
+    border-radius: 13px !important;
+  }
+
+  #gachaScreen .banner b {
+    font-size: 10px !important;
+    padding: 4px 9px !important;
+  }
+
+  #gachaScreen .banner h2 {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    margin: 9px 0 !important;
+  }
+
+  #gachaScreen .banner p,
+  #gachaScreen .banner small {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* 1회 / 10회 뽑기 버튼 */
+  #gachaScreen .actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #gachaScreen .actions > #one,
+  #gachaScreen .actions > .ten-pull-wrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  #gachaScreen .actions #one,
+  #gachaScreen .actions #ten {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    padding: 8px 5px !important;
+  }
+
+  #gachaScreen .pull-label {
+    font-size: 15px !important;
+  }
+
+  #gachaScreen .pull-cost {
+    font-size: 12px !important;
+  }
+
+  #gachaScreen .guarantee-badge {
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 통계 */
+  #gachaScreen .stats {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    margin: 12px 0 !important;
+  }
+
+  /* 결과 카드 */
+  #gachaScreen #results {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  #gachaScreen #results .card {
+    border-radius: 11px !important;
+  }
+
+  #gachaScreen #results .card .info {
+    padding: 8px !important;
+  }
+
+  #gachaScreen #results .card .stars {
+    font-size: 12px !important;
+  }
+
+  #gachaScreen #results .card .title {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+    margin-top: 3px !important;
+  }
+
+  #gachaScreen #results .card .actor {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+    padding-top: 4px !important;
+  }
+
+  #gachaScreen #results .empty {
+    padding: 35px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+/* MOBILE GACHA CARD TEXT SIZE SWAP */
+@media (max-width: 600px) {
+  #gachaScreen #results .card .title {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+  }
+
+  #gachaScreen #results .card .actor {
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+  }
+}
+
+
+/* MOBILE UI STEP 5 - OWNED COLLECTION */
+@media (max-width: 600px) {
+
+  /* 희귀도 필터: 첫 줄 4개, 정렬 버튼 둘째 줄 */
+  #ownedScreen .owned-filters {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    overflow: visible !important;
+    padding-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  #ownedScreen .owned-filter {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 9px 2px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  #ownedScreen .owned-rank-order-button {
+    grid-column: 1 / -1 !important;
+    justify-self: start !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 2px 0 4px !important;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* 카드 2열 유지 */
+  #ownedScreen .owned-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  /* 캐릭터 이름 작게 */
+  #ownedScreen .owned-card-actor {
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 카드명 크게 */
+  #ownedScreen .owned-card-title {
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+
+/* MOBILE OWNED COLLECTION - THREE COLUMNS */
+@media (max-width: 600px) {
+  #ownedScreen .owned-results {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+
+  #ownedScreen .owned-card {
+    min-width: 0 !important;
+    border-radius: 9px !important;
+  }
+
+  #ownedScreen .owned-card-info {
+    padding: 6px !important;
+  }
+
+  #ownedScreen .owned-card-stars {
+    font-size: 10px !important;
+  }
+
+  #ownedScreen .owned-card-actor {
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+  }
+
+  #ownedScreen .owned-card-title {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  #ownedScreen .owned-card-count {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #ownedScreen .owned-results {
+    gap: 5px !important;
+  }
+
+  #ownedScreen .owned-card-info {
+    padding: 5px !important;
+  }
+}
+
+
+/* ===== MOBILE ITEMS: 4 COLUMNS ===== */
+@media (max-width: 600px) {
+
+  #itemsList.items-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    align-items: start;
+  }
+
+  #itemsList .items-card {
+    min-width: 0;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  #itemsList .items-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 7px;
+  }
+
+  #itemsList .items-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #itemsList .items-card-name {
+    margin-top: 5px;
+    font-size: 9px;
+    line-height: 1.3;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+}
+
+
+/* MOBILE MINIGAME UI V1 */
+@media (max-width: 600px) {
+
+  .minigame-selector {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+
+  .minigame-selector .minigame-selector-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    margin: 0 !important;
+    padding: 5px 7px !important;
+    border-radius: 11px !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .minigame-selector .minigame-button-line {
+    display: block;
+  }
+
+  #dugongSongList .dugong-song-select-title {
+    font-size: 21px !important;
+    line-height: 1.4 !important;
+  }
+
+  #dugongSongList .dugong-chart-disclaimer {
+    font-size: 10px !important;
+  }
+
+  #dugongSongList .dugong-song-select-label {
+    font-size: 15px !important;
+  }
+
+  #dugongSongList .dugong-song-sort {
+    font-size: 11px !important;
+  }
+
+  #dugongSongSort {
+    font-size: 11px !important;
+    padding: 6px 9px !important;
+  }
+
+  #dugongSongList .dugong-song-item {
+    min-height: 56px !important;
+    padding: 7px 10px !important;
+    gap: 9px !important;
+    border-radius: 10px !important;
+    font-size: 12px !important;
+  }
+
+  #dugongSongList .dugong-song-level {
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain !important;
+    flex: 0 0 42px !important;
+  }
+
+  #dugongSongList .dugong-song-name {
+    font-size: 12px !important;
+    line-height: 1.3 !important;
+  }
+
+  #dugongSongList .dugong-song-detail {
+    padding: 13px !important;
+    gap: 9px !important;
+    border-radius: 14px !important;
+  }
+
+  #dugongSelectedCover {
+    width: min(100%, 190px) !important;
+  }
+
+  #dugongSelectedTitle {
+    font-size: 16px !important;
+  }
+
+  #dugongSelectedLevel {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  #dugongSongPlay {
+    max-width: 190px !important;
+    padding: 10px !important;
+    font-size: 15px !important;
+  }
+
+}
+
+
+/* ACTOR QUIZ MOBILE COMPACT V1 */
+@media (max-width: 600px) {
+
+  #actorMiniGameContent .actor-quiz-header {
+    margin-bottom: 10px;
+  }
+
+  #actorMiniGameContent .actor-quiz-header h2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  #actorMiniGameContent .actor-quiz-progress {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+
+  #actorMiniGameContent .actor-quiz-type {
+    margin-bottom: 7px;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  #actorMiniGameContent .actor-quiz-image-frame {
+    width: min(100%, 260px);
+    height: 170px;
+    aspect-ratio: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+  }
+
+  #actorMiniGameContent .actor-quiz-image-frame[data-mode="crop"] {
+    width: 170px;
+    height: 170px;
+    aspect-ratio: 1 / 1;
+  }
+
+  #actorMiniGameContent .actor-quiz-image-frame[data-mode="blur"],
+  #actorMiniGameContent .actor-quiz-image-frame.answer-revealed {
+    width: min(100%, 260px) !important;
+    height: 170px !important;
+    aspect-ratio: auto !important;
+  }
+
+  #actorMiniGameContent .actor-quiz-choices {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  #actorMiniGameContent .actor-quiz-choice {
+    min-height: 38px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  #actorMiniGameContent .actor-quiz-result {
+    margin-top: 8px;
+    min-height: 20px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* ACTOR QUIZ CLEAR MOBILE COMPACT V1 */
+@media (max-width: 600px) {
+
+  #actorMiniGameContent .actor-quiz-final {
+    margin-top: 10px;
+  }
+
+  #actorMiniGameContent .actor-quiz-final-image {
+    width: min(150px, 42vw);
+    max-height: 155px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  #actorMiniGameContent .actor-quiz-reward {
+    margin-top: 8px;
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  #actorMiniGameContent .actor-quiz-restart {
+    margin-top: 10px;
+    padding: 7px 17px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ROBOT CAPTCHA MOBILE COMPACT V1 */
+@media (max-width: 600px) {
+
+  .robot-captcha-header {
+    min-height: 92px;
+    padding: 14px 16px;
+  }
+
+  .robot-captcha-header .robot-captcha-actor {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .robot-captcha-header .robot-captcha-instruction {
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .robot-captcha-header .robot-captcha-note {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+}
+
+
+/* ROBOT CAPTCHA MOBILE FOOTER FIX V1 */
+@media (max-width: 600px) {
+
+  .robot-captcha-footer {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .robot-captcha-result {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 11px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .robot-captcha-icon-button {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 34px;
+    padding: 0;
+    font-size: 19px;
+  }
+
+  .robot-captcha-confirm {
+    flex: 0 0 70px;
+    width: 70px;
+    min-width: 0;
+    height: 38px;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ===== SONG QUIZ MOBILE COMPACT V1 ===== */
+@media (max-width: 600px) {
+
+  #songMiniGameContent > h2 {
+    font-size: 21px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.3;
+  }
+
+  #songMiniGameContent .song-quiz-question {
+    padding: 8px 0 !important;
+    margin: 0 !important;
+  }
+
+  #songMiniGameContent .song-quiz-question h3 {
+    font-size: 17px !important;
+    margin: 0 0 6px !important;
+  }
+
+  #songMiniGameContent .song-quiz-question p {
+    font-size: 13px !important;
+    margin: 4px 0 !important;
+  }
+
+  #songQuizPlay {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    margin: 12px auto !important;
+    padding: 0 !important;
+    font-size: 23px !important;
+  }
+
+  #songQuizOptions {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 8px !important;
+    margin: 12px 0 0 !important;
+  }
+
+  #songQuizOptions .song-quiz-option {
+    min-height: 46px !important;
+    padding: 9px 10px !important;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    border-radius: 10px !important;
+  }
+
+  #songQuizReveal {
+    margin-top: 10px !important;
+  }
+
+  #songQuizReveal img,
+  #songQuizCover {
+    max-width: 130px !important;
+    max-height: 130px !important;
+    object-fit: contain;
+  }
+
+  #songQuizNext,
+  #songQuizRestart {
+    min-height: 38px !important;
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+
+  #songMiniGameContent .song-quiz-result {
+    padding: 10px 0 !important;
+  }
+
+  #songMiniGameContent .song-quiz-result h3 {
+    font-size: 19px !important;
+  }
+
+  #songMiniGameContent .song-quiz-result p {
+    font-size: 13px !important;
+  }
+
+  #songMiniGameContent .song-quiz-reward {
+    font-size: 22px !important;
+  }
+
+}

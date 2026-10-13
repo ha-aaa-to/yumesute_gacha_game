@@ -499,6 +499,10 @@ if (startScreen && startButton && startDugong) {
 
   startButton.addEventListener("click", () => {
     startDugong.src = activeDugong;
+
+    /* 시작할 때마다 ガチャ 화면으로 이동 */
+    document.getElementById("gachaMainButton")?.click();
+
     startScreen.classList.add("start-leave");
 
     setTimeout(() => {
@@ -580,6 +584,9 @@ function showTitleScreen() {
 function hideTitleScreen() {
   if (!startScreenForReturn) return;
 
+  /* 마지막으로 열었던 항목 대신 ガチャ로 복귀 */
+  document.getElementById("gachaMainButton")?.click();
+
   startScreenForReturn.style.opacity = "0";
   startScreenForReturn.style.pointerEvents = "none";
 
@@ -632,19 +639,19 @@ if (startScreenForReturn) {
 /* ===== DAILY RESET SYSTEM ===== */
 
 /*
-  유メステ 팬게임의 하루는 오전 4시에 갱신된다.
+  유メステ 팬게임의 하루는 오전 5시에 갱신된다.
 
   예:
-  2026/10/07 03:59 -> 2026-10-06
-  2026/10/07 04:00 -> 2026-10-07
+  2026/10/07 04:59 -> 2026-10-06
+  2026/10/07 05:00 -> 2026-10-07
 
   사용자의 기기 현지 시간을 기준으로 한다.
 */
 function getGameDate(now = new Date()) {
   const gameTime = new Date(now);
 
-  /* 오전 4시보다 이르면 전날로 취급 */
-  gameTime.setHours(gameTime.getHours() - 4);
+  /* 오전 5시보다 이르면 전날로 취급 */
+  gameTime.setHours(gameTime.getHours() - 5);
 
   const year = gameTime.getFullYear();
   const month = String(gameTime.getMonth() + 1).padStart(2, "0");
@@ -2549,6 +2556,201 @@ if (miniGameButtonActive) {
 
 })();
 
+/* ===== DUGONG SONG CONFIG ===== */
+
+/* DUGONG SONG DETAIL UI V1 */
+(() => {
+  const songs = {
+    "iroha-blooming": {
+      title: "いろはうたBLOOMING",
+      cover: 'assets/game/いろはうたBLOOMING/いろはうたBLOOMING.png',
+      level: "assets/dugong-charts/24.png",
+      levelText: "STELLA 24"
+    },
+    "wannavista": {
+      title: "ワナビスタ！",
+      cover: 'assets/game/ワナビスタ！/ワナビスタ！.png',
+      level: "assets/dugong-charts/25.png",
+      levelText: "STELLA 25"
+    }
+  };
+
+  const buttons = [...document.querySelectorAll(
+    "#dugongSongList [data-dugong-song]"
+  )];
+
+  const cover = document.getElementById("dugongSelectedCover");
+  const title = document.getElementById("dugongSelectedTitle");
+  const level = document.getElementById("dugongSelectedLevel");
+  const play = document.getElementById("dugongSongPlay");
+
+  if (!cover || !title || !level || !play) return;
+
+  let selected = null;
+
+  const detail = document.querySelector(
+    "#dugongSongList .dugong-song-detail"
+  );
+  if (detail) {
+    detail.hidden = true;
+    detail.style.display = "none";
+  }
+  buttons.forEach(button => button.classList.remove("active"));
+
+  function resetSongSelection() {
+    selected = null;
+
+    const list = document.getElementById("dugongSongList");
+    const stage = document.getElementById("dugongGameStage");
+
+    buttons.forEach(button => {
+      button.classList.remove("active");
+    });
+
+    if (detail) {
+      detail.hidden = true;
+      detail.style.display = "none";
+    }
+
+    // 다른 화면 전환 코드가 실행된 다음에도 초기 상태 유지
+    requestAnimationFrame(() => {
+      if (list) list.hidden = false;
+      if (stage) stage.hidden = true;
+
+      buttons.forEach(button => {
+        button.classList.remove("active");
+      });
+
+      if (detail) {
+        detail.hidden = true;
+        detail.style.display = "none";
+      }
+    });
+  }
+
+  document.getElementById("miniGameButton")
+    ?.addEventListener("click", resetSongSelection);
+
+  document.querySelector('[data-minigame="dugong"]')
+    ?.addEventListener("click", resetSongSelection);
+  let forwarding = false;
+
+  buttons.forEach(button => {
+    button.addEventListener("click", event => {
+      if (forwarding) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      const key = button.dataset.dugongSong;
+      const song = songs[key];
+      if (!song) return;
+
+      selected = key;
+      const detail = document.querySelector(
+        "#dugongSongList .dugong-song-detail"
+      );
+      if (detail) {
+        detail.hidden = false;
+        detail.style.removeProperty("display");
+        detail.style.display = "flex";
+      }
+      cover.src = song.cover;
+      title.textContent = song.title;
+      level.src = song.level;
+      level.alt = song.levelText;
+
+      buttons.forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
+    }, true);
+  });
+
+  play.addEventListener("click", () => {
+    const button = buttons.find(
+      item => item.dataset.dugongSong === selected
+    );
+    if (!button) return;
+
+    forwarding = true;
+    try {
+      button.click();
+    } finally {
+      forwarding = false;
+    }
+  });
+})();
+
+
+/* DUGONG AUTO CHART - STELLA 25 */
+window.DUGONG_AUTO_CHART_WANNAVISTA = (() => {
+  const notes = [];
+  let seed = 25001;
+
+  function random() {
+    seed = (seed * 16807) % 2147483647;
+    return (seed - 1) / 2147483646;
+  }
+
+  let id = 1;
+  let time = 5.3;
+
+  while (time < 89.5) {
+    const isLong = random() < 0.23;
+
+    notes.push({
+      id: id++,
+      time: Number(time.toFixed(3)),
+      xNorm: 0.06 + random() * 0.88,
+      kind: isLong ? "long" : "tap",
+      sourceH: isLong ? 90 : 8
+    });
+
+    time += 0.18 + random() * 0.17;
+  }
+
+  return { notes };
+})();
+
+window.DUGONG_SELECTED_SONG = "iroha-blooming";
+
+window.DUGONG_SONG_CONFIG = {
+  "iroha-blooming": {
+    chart: () => window.DUGONG_AUTO_CHART_IROHA_2,
+    audio: "assets/dugong-charts/066/irohauta-blooming.mp3",
+    firstHit: 3.5,
+    lastHit: 94.5,
+    directTime: true
+  },
+  "wannavista": {
+    chart: () => window.DUGONG_AUTO_CHART_WANNAVISTA,
+    audio: "assets/game/ワナビスタ！/ワナビスタ！.mp3",
+    firstHit: 5.3227,
+    lastHit: 90,
+    directTime: true
+  }
+};
+
+window.getDugongSongConfig = () =>
+  window.DUGONG_SONG_CONFIG[
+    window.DUGONG_SELECTED_SONG
+  ] || window.DUGONG_SONG_CONFIG["iroha-blooming"];
+
+document.querySelectorAll("[data-dugong-song]").forEach(button => {
+  button.addEventListener("click", () => {
+    const key = button.dataset.dugongSong;
+    const config = window.DUGONG_SONG_CONFIG[key];
+    if (!config) return;
+    window.DUGONG_SELECTED_SONG = key;
+    const audio = document.getElementById("dugongGameAudio");
+    if (audio) {
+      audio.pause();
+      audio.src = config.audio;
+      audio.load();
+    }
+  }, true);
+});
+
 /* ===== DUGONG 066 CHART + AUDIO PROTOTYPE ===== */
 
 (() => {
@@ -2819,10 +3021,14 @@ if (miniGameButtonActive) {
   }
 
 
-  startButton.addEventListener(
-    "click",
-    startPrototype
-  );
+  /*
+   * 이전 이미지 채보 프로토타입의 START 연결 비활성화.
+   * 현재 듀공 회피 게임의 startVectorGame()만 사용.
+   */
+  // startButton.addEventListener(
+  //   "click",
+  //   startPrototype
+  // );
 
 
   audio.addEventListener(
@@ -2893,7 +3099,9 @@ if (miniGameButtonActive) {
     !area ||
     !start ||
     !window.DUGONG_FULL_CHART_066 ||
-    !Array.isArray(window.DUGONG_FULL_CHART_066.notes)
+    !Array.isArray(window.DUGONG_FULL_CHART_066.notes) ||
+    !window.DUGONG_FULL_CHART_001 ||
+    !Array.isArray(window.DUGONG_FULL_CHART_001.notes)
   ) {
     console.warn("Dugong chart data unavailable.");
     return;
@@ -3024,7 +3232,7 @@ if (miniGameButtonActive) {
       한쪽에 넓은 '듀공 쉼터'가 생기지 않는다.
     */
     const notes =
-      window.DUGONG_FULL_CHART_066.notes;
+      window.getDugongSongConfig().chart().notes;
 
     let minX = Infinity;
     let maxX = -Infinity;
@@ -3130,16 +3338,90 @@ if (miniGameButtonActive) {
     const fieldWidth =
       field.clientWidth;
 
-    window.DUGONG_FULL_CHART_066.notes.forEach(
+    const allNotes = window.getDugongSongConfig().chart().notes;
+    const songKey = window.DUGONG_SELECTED_SONG;
+
+    // STELLA 24~31: 높은 레벨일수록 노트 간 최소 간격 축소
+    const minGapByLevel = {
+      24: 0.24,
+      25: 0.17,
+      26: 0.14,
+      27: 0.11,
+      28: 0.09,
+      29: 0.07,
+      30: 0.05,
+      31: 0.03
+    };
+
+    const levelBySong = {
+      "iroha-blooming": 24,
+      "wannavista": 25
+    };
+
+    const level = levelBySong[songKey] || 26;
+    const isMobileDugong = window.matchMedia("(max-width: 600px)").matches;
+    const minGap = isMobileDugong
+      ? Math.max(minGapByLevel[level], 0.48)
+      : minGapByLevel[level];
+
+    const songConfig = window.getDugongSongConfig();
+
+    const noteTime = note => {
+      if (songConfig.directTime) {
+        return Number(note.time);
+      }
+
+      return CHART_FIRST_HIT +
+        Math.max(0, Math.min(1, Number(note.time) / 100)) *
+        (CHART_LAST_HIT - CHART_FIRST_HIT);
+    };
+
+    const sortedNotes = [...allNotes].sort(
+      (a, b) => noteTime(a) - noteTime(b)
+    );
+
+    const filteredNotes = [];
+    let lastKeptTime = -Infinity;
+
+    for (const note of sortedNotes) {
+      const time = noteTime(note);
+
+      if (!Number.isFinite(time)) continue;
+      if (time - lastKeptTime < minGap) continue;
+
+      filteredNotes.push(note);
+      lastKeptTime = time;
+    }
+
+    console.log(
+      "[Dugong Difficulty]",
+      songKey,
+      "STELLA", level,
+      allNotes.length, "→", filteredNotes.length
+    );
+
+    // DUGONG WANNAVISTA 90S NOTE CUTOFF
+    // 워너비스타는 90초 이후 판정 노트를 생성하지 않음
+    const playableNotes =
+      songKey === "wannavista"
+        ? filteredNotes.filter(note => noteTime(note) < 90)
+        : filteredNotes;
+
+    playableNotes.forEach(
       note => {
 
         const el =
           document.createElement("div");
 
         const colorMap =
-          window.DUGONG_NOTE_COLORS_066;
+          window.DUGONG_SELECTED_SONG === 'iroha-blooming'
+            ? window.DUGONG_NOTE_COLORS_066
+            : null;
 
-        let noteColor = "purple";
+        let noteColor =
+          window.DUGONG_SELECTED_SONG === "wannavista"
+            ? (note.kind === "long" ? "purple" : "blue")
+            : "purple";
 
         if (
           colorMap &&
@@ -3149,8 +3431,11 @@ if (miniGameButtonActive) {
           noteColor = "blue";
         }
 
+        const noteKind =
+          note.kind === "hold" ? "long" : note.kind;
+
         el.className =
-          `dugong-vector-note ${note.kind} ${noteColor}`;
+          `dugong-vector-note ${noteKind} ${noteColor}`;
 
 
         const width =
@@ -3208,11 +3493,15 @@ if (miniGameButtonActive) {
             )
           );
 
+        const songConfig = window.getDugongSongConfig();
+
         el.dataset.time =
           String(
-            CHART_FIRST_HIT +
-            chartRatio *
-            (CHART_LAST_HIT - CHART_FIRST_HIT)
+            songConfig.directTime
+              ? Number(note.time)
+              : CHART_FIRST_HIT +
+                chartRatio *
+                (CHART_LAST_HIT - CHART_FIRST_HIT)
           );
 
         field.appendChild(el);
@@ -3275,6 +3564,18 @@ if (miniGameButtonActive) {
 
   function showDugongClearReward() {
 
+    const dugongLevelBySong = {
+      "iroha-blooming": 24,
+      "wannavista": 25
+    };
+
+    const dugongLevel =
+      dugongLevelBySong[window.DUGONG_SELECTED_SONG] || 24;
+
+    const dugongRewardByLevel =
+      dugongLevel >= 30 ? 2000 :
+      dugongLevel >= 27 ? 1500 : 1000;
+
     /*
       CLEAR 보상 실제 지급.
       같은 플레이에서는 한 번만 지급한다.
@@ -3283,13 +3584,13 @@ if (miniGameButtonActive) {
 
       dugongRewardGiven = true;
 
-      gameSave.currency += 1000;
+      gameSave.currency += dugongRewardByLevel;
 
       saveGameData();
       updateCurrencyDisplay();
 
       console.log(
-        "[Dugong] CLEAR reward +1,000",
+        `[Dugong] STELLA ${dugongLevel} CLEAR reward +${dugongRewardByLevel.toLocaleString()}`,
         `所持通貨: ${gameSave.currency}`
       );
     }
@@ -3310,7 +3611,7 @@ if (miniGameButtonActive) {
       const amount =
         document.createElement("span");
 
-      amount.textContent = "+1,000";
+      amount.textContent = `+${dugongRewardByLevel.toLocaleString()}`;
 
       reward.appendChild(icon);
       reward.appendChild(amount);
@@ -3318,11 +3619,21 @@ if (miniGameButtonActive) {
       area.appendChild(reward);
     }
 
+    const rewardAmount = reward.querySelector("span");
+    if (rewardAmount) {
+      rewardAmount.textContent =
+        `+${dugongRewardByLevel.toLocaleString()}`;
+    }
+
     reward.style.display = "flex";
   }
 
 
   function clearDugongGame() {
+    // 종료 시 화면에 남은 노트 제거
+    field.querySelectorAll(".dugong-vector-note")
+      .forEach(note => note.remove());
+
 
     running = false;
 
@@ -3365,7 +3676,23 @@ if (miniGameButtonActive) {
   }
 
 
+  /* ワナビスタ！: 음원이 끝나면 즉시 CLEAR */
+  document.getElementById("dugongGameAudio")
+    ?.addEventListener("ended", () => {
+      if (
+        window.DUGONG_SELECTED_SONG === "wannavista" &&
+        running &&
+        lives > 0
+      ) {
+        clearDugongGame();
+      }
+    });
+
   function gameOverDugong() {
+    // 종료 시 화면에 남은 노트 제거
+    field.querySelectorAll(".dugong-vector-note")
+      .forEach(note => note.remove());
+
 
     running = false;
 
@@ -3513,10 +3840,21 @@ if (miniGameButtonActive) {
         "dugongGameAudio"
       );
 
+    const isWannavista =
+      window.DUGONG_SELECTED_SONG === "wannavista";
+
+    // 워너비스타는 음원 종료 시 즉시 게임 종료
+    if (isWannavista && audio && audio.ended) {
+      if (lives > 0) clearDugongGame();
+      return;
+    }
+
     const elapsed =
-      audio && !audio.paused
+      isWannavista && audio
         ? audio.currentTime
-        : (now - startedAt) / 1000;
+        : audio && !audio.paused
+          ? audio.currentTime
+          : (now - startedAt) / 1000;
 
     const h =
       field.clientHeight;
@@ -3561,7 +3899,11 @@ if (miniGameButtonActive) {
 
 
     if (
-      elapsed >= CHART_LAST_HIT + 1.0
+      (
+        window.DUGONG_SELECTED_SONG === "wannavista"
+          ? elapsed >= 90
+          : elapsed >= window.getDugongSongConfig().lastHit + 1.0
+      )
     ) {
 
       if (lives > 0) {
@@ -5002,6 +5344,24 @@ ensureActorDuplicateRewards();
 
     button.addEventListener("click", () => {
 
+      /*
+        곡을 다시 선택할 때 이전 플레이 상태를 완전히 초기화.
+        초기화 함수가 곡 선택 화면으로 되돌린 뒤,
+        아래에서 선택한 곡의 START 화면을 다시 표시한다.
+      */
+      if (
+        typeof window.hardResetDugongOnLeave ===
+        "function"
+      ) {
+        window.hardResetDugongOnLeave();
+      }
+
+      songButtons.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
       if (songList) {
         songList.hidden = true;
       }
@@ -5132,6 +5492,26 @@ ensureActorDuplicateRewards();
     button.addEventListener(
       "click",
       () => {
+
+        /*
+          이전 플레이가 끝난 상태에서 곡을 다시 선택하면
+          RESTART와 동일한 초기화를 먼저 실행한다.
+        */
+        if (
+          restartButton.classList.contains("visible")
+        ) {
+          restartButton.click();
+        }
+
+        /*
+          남아 있을 수 있는 클리어 보상 표시도 제거.
+        */
+        const oldClearReward =
+          document.getElementById("dugongClearReward");
+
+        if (oldClearReward) {
+          oldClearReward.remove();
+        }
 
         songButtons.forEach(other => {
           other.classList.toggle(
@@ -5346,7 +5726,7 @@ ensureActorDuplicateRewards();
         document.getElementById("dugongClearReward");
 
       if (clearReward) {
-        clearReward.style.display = "none";
+        clearReward.remove();
       }
 
       /*
@@ -5544,14 +5924,15 @@ ensureActorDuplicateRewards();
         "click",
         () => {
 
-          if (
-            button.dataset.minigame !==
-            "dugong"
-          ) {
+          /*
+            미니게임 선택 항목을 누를 때마다
+            듀공 게임을 완전 초기화한다.
 
-            hardResetDugongOnLeave();
-
-          }
+            따라서 듀공 게임 종료 후
+            「動くジュゴンに降るノーツ」를
+            다시 눌러도 START 초기 화면으로 돌아간다.
+          */
+          hardResetDugongOnLeave();
 
         },
         true
@@ -7369,7 +7750,7 @@ ensureActorDuplicateRewards();
 
                 if (
                   choice.textContent ===
-                  card.actor
+                  answerActor
                 ) {
                   choice.classList.add(
                     "correct"
@@ -9090,9 +9471,9 @@ ensureActorDuplicateRewards();
   /*
     매일 무료 상품용 날짜 키.
 
-    하루의 시작은 00:00가 아니라 04:00.
-    현재 시각에서 4시간을 빼고 날짜를 구하면
-    새벽 4시 기준 일일 리셋을 간단히 처리할 수 있다.
+    하루의 시작은 00:00가 아니라 05:00.
+    현재 시각에서 5시간을 빼고 날짜를 구하면
+    새벽 5시 기준 일일 리셋을 간단히 처리할 수 있다.
   */
   function getJewelShopDailyKey() {
 
@@ -9101,7 +9482,7 @@ ensureActorDuplicateRewards();
     const shifted =
       new Date(
         now.getTime() -
-        4 * 60 * 60 * 1000
+        5 * 60 * 60 * 1000
       );
 
     const year =
@@ -9452,3 +9833,33 @@ window.addEventListener("load", () => {
 
 })();
 
+
+
+/* ===== DUGONG SONG SELECTION HEART RESET ===== */
+(() => {
+  document.querySelectorAll("[data-dugong-song]").forEach(button => {
+    button.addEventListener("click", () => {
+      const hud = document.getElementById("dugongLifeHud");
+      if (hud) hud.textContent = "♥♥♥";
+    });
+  });
+})();
+
+/* DUGONG SONG RESTART VISIBILITY FIX */
+(() => {
+  function hideRestart() {
+    const restart = document.getElementById("dugongRestartButton");
+    if (!restart) return;
+
+    restart.classList.remove("visible");
+    restart.hidden = true;
+    restart.style.display = "none";
+  }
+
+  document.querySelectorAll("[data-dugong-song]").forEach(button => {
+    button.addEventListener("click", hideRestart);
+  });
+
+  document.getElementById("dugongChartStart")
+    ?.addEventListener("click", hideRestart);
+})();

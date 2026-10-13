@@ -2569,7 +2569,7 @@ if (miniGameButtonActive) {
     },
     "wannavista": {
       title: "ワナビスタ！",
-      cover: 'assets/game/ワナビスタ！/ワナビスタ！.png',
+      cover: 'assets/game/ワナビスタ！/ワナビスタ！.png',
       level: "assets/dugong-charts/25.png",
       levelText: "STELLA 25"
     }
@@ -2724,7 +2724,7 @@ window.DUGONG_SONG_CONFIG = {
   },
   "wannavista": {
     chart: () => window.DUGONG_AUTO_CHART_WANNAVISTA,
-    audio: "assets/game/ワナビスタ！/ワナビスタ！.mp3",
+    audio: "assets/game/ワナビスタ！/ワナビスタ！.mp3",
     firstHit: 5.3227,
     lastHit: 90,
     directTime: true

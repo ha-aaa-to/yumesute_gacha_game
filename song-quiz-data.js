@@ -37,7 +37,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "BiSH-星が瞬く夜に-",
     "audio": "assets/game/BiSH-星が瞬く夜に-/BiSH-星が瞬く夜に-.mp3",
-    "cover": "assets/game/BiSH-星が瞬く夜に-/BiSH-星が瞬く夜に-.png"
+    "cover": "assets/game/BiSH-星が瞬く夜に-/BiSH-星が瞬く夜に-.png"
   },
   {
     "title": "Binary Star",
@@ -422,17 +422,17 @@ const SONG_QUIZ_DATA = [
   {
     "title": "あの夏が飽和する。",
     "audio": "assets/game/あの夏が飽和する。/あの夏が飽和する。.mp3",
-    "cover": "assets/game/あの夏が飽和する。/あの夏が飽和する。.png"
+    "cover": "assets/game/あの夏が飽和する。/あの夏が飽和する。.png"
   },
   {
     "title": "いこうよ！ネバーランドへ",
     "audio": "assets/game/いこうよ！ネバーランドへ/いこうよ！ネバーランドへ.mp3",
-    "cover": "assets/game/いこうよ！ネバーランドへ/いこうよ！ネバーランドへ.png"
+    "cover": "assets/game/いこうよ！ネバーランドへ/いこうよ！ネバーランドへ.png"
   },
   {
     "title": "いつか、薄紅の空の下で",
     "audio": "assets/game/いつか、薄紅の空の下で/いつか、薄紅の空の下で.mp3",
-    "cover": "assets/game/いつか、薄紅の空の下で/いつか、薄紅の空の下で.png"
+    "cover": "assets/game/いつか、薄紅の空の下で/いつか、薄紅の空の下で.png"
   },
   {
     "title": "いろはうたBLOOMING",
@@ -442,7 +442,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "いーあるふぁんくらぶ",
     "audio": "assets/game/いーあるふぁんくらぶ/いーあるふぁんくらぶ.mp3",
-    "cover": "assets/game/いーあるふぁんくらぶ/いーあるふぁんくらぶ.png"
+    "cover": "assets/game/いーあるふぁんくらぶ/いーあるふぁんくらぶ.png"
   },
   {
     "title": "おちゃめ機能",
@@ -452,7 +452,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "かくれんぼ",
     "audio": "assets/game/かくれんぼ/かくれんぼ.mp3",
-    "cover": "assets/game/かくれんぼ/かくれんぼ.png"
+    "cover": "assets/game/かくれんぼ/かくれんぼ.png"
   },
   {
     "title": "きゅうくらりん",
@@ -462,47 +462,47 @@ const SONG_QUIZ_DATA = [
   {
     "title": "きらり！マジカリュースマイル！",
     "audio": "assets/game/きらり！マジカリュースマイル！/きらり！マジカリュースマイル！.mp3",
-    "cover": "assets/game/きらり！マジカリュースマイル！/きらり！マジカリュースマイル！.png"
+    "cover": "assets/game/きらり！マジカリュースマイル！/きらり！マジカリュースマイル！.png"
   },
   {
     "title": "こんなに素晴らしい世界で",
     "audio": "assets/game/こんなに素晴らしい世界で/こんなに素晴らしい世界で.mp3",
-    "cover": "assets/game/こんなに素晴らしい世界で/こんなに素晴らしい世界で.png"
+    "cover": "assets/game/こんなに素晴らしい世界で/こんなに素晴らしい世界で.png"
   },
   {
     "title": "ただ声一つ",
     "audio": "assets/game/ただ声一つ/ただ声一つ.mp3",
-    "cover": "assets/game/ただ声一つ/ただ声一つ.png"
+    "cover": "assets/game/ただ声一つ/ただ声一つ.png"
   },
   {
     "title": "ちいさないのちのさけるばしょ",
     "audio": "assets/game/ちいさないのちのさけるばしょ/ちいさないのちのさけるばしょ.mp3",
-    "cover": "assets/game/ちいさないのちのさけるばしょ/ちいさないのちのさけるばしょ.png"
+    "cover": "assets/game/ちいさないのちのさけるばしょ/ちいさないのちのさけるばしょ.png"
   },
   {
     "title": "てぃだんちゅ MEETS てぃんがーら！",
     "audio": "assets/game/てぃだんちゅ MEETS てぃんがーら！/てぃだんちゅ MEETS てぃんがーら！.mp3",
-    "cover": "assets/game/てぃだんちゅ MEETS てぃんがーら！/てぃだんちゅ MEETS てぃんがーら！.png"
+    "cover": "assets/game/てぃだんちゅ MEETS てぃんがーら！/てぃだんちゅ MEETS てぃんがーら！.png"
   },
   {
     "title": "ひとりの夜のフィルモグラフィー",
     "audio": "assets/game/ひとりの夜のフィルモグラフィー/ひとりの夜のフィルモグラフィー.mp3",
-    "cover": "assets/game/ひとりの夜のフィルモグラフィー/ひとりの夜のフィルモグラフィー.png"
+    "cover": "assets/game/ひとりの夜のフィルモグラフィー/ひとりの夜のフィルモグラフィー.png"
   },
   {
     "title": "ふぁうすと・いんぷれっしょん！！",
     "audio": "assets/game/ふぁうすと・いんぷれっしょん！！/ふぁうすと・いんぷれっしょん！！.mp3",
-    "cover": "assets/game/ふぁうすと・いんぷれっしょん！！/ふぁうすと・いんぷれっしょん！！.png"
+    "cover": "assets/game/ふぁうすと・いんぷれっしょん！！/ふぁうすと・いんぷれっしょん！！.png"
   },
   {
     "title": "ふろうてぃんぐ・ていすてぃ",
     "audio": "assets/game/ふろうてぃんぐ・ていすてぃ/ふろうてぃんぐ・ていすてぃ.mp3",
-    "cover": "assets/game/ふろうてぃんぐ・ていすてぃ/ふろうてぃんぐ・ていすてぃ.png"
+    "cover": "assets/game/ふろうてぃんぐ・ていすてぃ/ふろうてぃんぐ・ていすてぃ.png"
   },
   {
     "title": "めんどーい！やっほーい！ともだち！",
     "audio": "assets/game/めんどーい！やっほーい！ともだち！/めんどーい！やっほーい！ともだち！.mp3",
-    "cover": "assets/game/めんどーい！やっほーい！ともだち！/めんどーい！やっほーい！ともだち！.png"
+    "cover": "assets/game/めんどーい！やっほーい！ともだち！/めんどーい！やっほーい！ともだち！.png"
   },
   {
     "title": "アイ・ウィル！",
@@ -512,27 +512,27 @@ const SONG_QUIZ_DATA = [
   {
     "title": "アクト・レゾナンス",
     "audio": "assets/game/アクト・レゾナンス/アクト・レゾナンス.mp3",
-    "cover": "assets/game/アクト・レゾナンス/アクト・レゾナンス.png"
+    "cover": "assets/game/アクト・レゾナンス/アクト・レゾナンス.png"
   },
   {
     "title": "アスノヨゾラ哨戒班",
     "audio": "assets/game/アスノヨゾラ哨戒班/アスノヨゾラ哨戒班.mp3",
-    "cover": "assets/game/アスノヨゾラ哨戒班/アスノヨゾラ哨戒班.png"
+    "cover": "assets/game/アスノヨゾラ哨戒班/アスノヨゾラ哨戒班.png"
   },
   {
     "title": "アタシのアシタはアタシがキメル",
     "audio": "assets/game/アタシのアシタはアタシがキメル/アタシのアシタはアタシがキメル.mp3",
-    "cover": "assets/game/アタシのアシタはアタシがキメル/アタシのアシタはアタシがキメル.png"
+    "cover": "assets/game/アタシのアシタはアタシがキメル/アタシのアシタはアタシがキメル.png"
   },
   {
     "title": "アンチ・サニーデイズ・カレンダー",
     "audio": "assets/game/アンチ・サニーデイズ・カレンダー/アンチ・サニーデイズ・カレンダー.mp3",
-    "cover": "assets/game/アンチ・サニーデイズ・カレンダー/アンチ・サニーデイズ・カレンダー.png"
+    "cover": "assets/game/アンチ・サニーデイズ・カレンダー/アンチ・サニーデイズ・カレンダー.png"
   },
   {
     "title": "アンプレザント・ライン",
     "audio": "assets/game/アンプレザント・ライン/アンプレザント・ライン.mp3",
-    "cover": "assets/game/アンプレザント・ライン/アンプレザント・ライン.png"
+    "cover": "assets/game/アンプレザント・ライン/アンプレザント・ライン.png"
   },
   {
     "title": "インフェルノ",
@@ -542,22 +542,22 @@ const SONG_QUIZ_DATA = [
   {
     "title": "ヴァンパイア",
     "audio": "assets/game/ヴァンパイア/ヴァンパイア.mp3",
-    "cover": "assets/game/ヴァンパイア/ヴァンパイア.png"
+    "cover": "assets/game/ヴァンパイア/ヴァンパイア.png"
   },
   {
     "title": "ヴィヴァラヰタ",
     "audio": "assets/game/ヴィヴァラヰタ/ヴィヴァラヰタ.mp3",
-    "cover": "assets/game/ヴィヴァラヰタ/ヴィヴァラヰタ.png"
+    "cover": "assets/game/ヴィヴァラヰタ/ヴィヴァラヰタ.png"
   },
   {
     "title": "ウタカタメロディ",
     "audio": "assets/game/ウタカタメロディ/ウタカタメロディ.mp3",
-    "cover": "assets/game/ウタカタメロディ/ウタカタメロディ.png"
+    "cover": "assets/game/ウタカタメロディ/ウタカタメロディ.png"
   },
   {
     "title": "ウタカタララバイ",
     "audio": "assets/game/ウタカタララバイ/ウタカタララバイ.mp3",
-    "cover": "assets/game/ウタカタララバイ/ウタカタララバイ.png"
+    "cover": "assets/game/ウタカタララバイ/ウタカタララバイ.png"
   },
   {
     "title": "エクストラ・エキストラ！ -Extra Extra-",
@@ -567,47 +567,47 @@ const SONG_QUIZ_DATA = [
   {
     "title": "エジソン",
     "audio": "assets/game/エジソン/エジソン.mp3",
-    "cover": "assets/game/エジソン/エジソン.png"
+    "cover": "assets/game/エジソン/エジソン.png"
   },
   {
     "title": "オドループ",
     "audio": "assets/game/オドループ/オドループ.mp3",
-    "cover": "assets/game/オドループ/オドループ.png"
+    "cover": "assets/game/オドループ/オドループ.png"
   },
   {
     "title": "オーバーライド",
     "audio": "assets/game/オーバーライド/オーバーライド.mp3",
-    "cover": "assets/game/オーバーライド/オーバーライド.png"
+    "cover": "assets/game/オーバーライド/オーバーライド.png"
   },
   {
     "title": "カオスが極まる",
     "audio": "assets/game/カオスが極まる/カオスが極まる.mp3",
-    "cover": "assets/game/カオスが極まる/カオスが極まる.png"
+    "cover": "assets/game/カオスが極まる/カオスが極まる.png"
   },
   {
     "title": "カルペ・ディエム",
     "audio": "assets/game/カルペ・ディエム/カルペ・ディエム.mp3",
-    "cover": "assets/game/カルペ・ディエム/カルペ・ディエム.png"
+    "cover": "assets/game/カルペ・ディエム/カルペ・ディエム.png"
   },
   {
     "title": "グローリー・ワンダーランド",
     "audio": "assets/game/グローリー・ワンダーランド/グローリー・ワンダーランド.mp3",
-    "cover": "assets/game/グローリー・ワンダーランド/グローリー・ワンダーランド.png"
+    "cover": "assets/game/グローリー・ワンダーランド/グローリー・ワンダーランド.png"
   },
   {
     "title": "サマーバカンス☆アクトレス！",
     "audio": "assets/game/サマーバカンス☆アクトレス！/サマーバカンス☆アクトレス！.mp3",
-    "cover": "assets/game/サマーバカンス☆アクトレス！/サマーバカンス☆アクトレス！.png"
+    "cover": "assets/game/サマーバカンス☆アクトレス！/サマーバカンス☆アクトレス！.png"
   },
   {
     "title": "シャイニングスター",
     "audio": "assets/game/シャイニングスター/シャイニングスター.mp3",
-    "cover": "assets/game/シャイニングスター/シャイニングスター.png"
+    "cover": "assets/game/シャイニングスター/シャイニングスター.png"
   },
   {
     "title": "シャボンに浮かぶセカイであおう",
     "audio": "assets/game/シャボンに浮かぶセカイであおう/シャボンに浮かぶセカイであおう.mp3",
-    "cover": "assets/game/シャボンに浮かぶセカイであおう/シャボンに浮かぶセカイであおう.png"
+    "cover": "assets/game/シャボンに浮かぶセカイであおう/シャボンに浮かぶセカイであおう.png"
   },
   {
     "title": "シャルル",
@@ -622,22 +622,22 @@ const SONG_QUIZ_DATA = [
   {
     "title": "シル・ヴ・プレジデント",
     "audio": "assets/game/シル・ヴ・プレジデント/シル・ヴ・プレジデント.mp3",
-    "cover": "assets/game/シル・ヴ・プレジデント/シル・ヴ・プレジデント.png"
+    "cover": "assets/game/シル・ヴ・プレジデント/シル・ヴ・プレジデント.png"
   },
   {
     "title": "ダイヤモンドの誓い",
     "audio": "assets/game/ダイヤモンドの誓い/ダイヤモンドの誓い.mp3",
-    "cover": "assets/game/ダイヤモンドの誓い/ダイヤモンドの誓い.png"
+    "cover": "assets/game/ダイヤモンドの誓い/ダイヤモンドの誓い.png"
   },
   {
     "title": "チューリングラブ",
     "audio": "assets/game/チューリングラブ/チューリングラブ.mp3",
-    "cover": "assets/game/チューリングラブ/チューリングラブ.png"
+    "cover": "assets/game/チューリングラブ/チューリングラブ.png"
   },
   {
     "title": "デアエ・エクス・マキナ！",
     "audio": "assets/game/デアエ・エクス・マキナ！/デアエ・エクス・マキナ！.mp3",
-    "cover": "assets/game/デアエ・エクス・マキナ！/デアエ・エクス・マキナ！.png"
+    "cover": "assets/game/デアエ・エクス・マキナ！/デアエ・エクス・マキナ！.png"
   },
   {
     "title": "テアトルム・アストラーレ",
@@ -652,22 +652,22 @@ const SONG_QUIZ_DATA = [
   {
     "title": "トゥインクル・トゥインクル・スクールデイズ！",
     "audio": "assets/game/トゥインクル・トゥインクル・スクールデイズ！/トゥインクル・トゥインクル・スクールデイズ！.mp3",
-    "cover": "assets/game/トゥインクル・トゥインクル・スクールデイズ！/トゥインクル・トゥインクル・スクールデイズ！.png"
+    "cover": "assets/game/トゥインクル・トゥインクル・スクールデイズ！/トゥインクル・トゥインクル・スクールデイズ！.png"
   },
   {
     "title": "トゥ・オブ・アス",
     "audio": "assets/game/トゥ・オブ・アス/トゥ・オブ・アス.mp3",
-    "cover": "assets/game/トゥ・オブ・アス/トゥ・オブ・アス.png"
+    "cover": "assets/game/トゥ・オブ・アス/トゥ・オブ・アス.png"
   },
   {
     "title": "トウキョウ・シャンディ・ランデヴ",
     "audio": "assets/game/トウキョウ・シャンディ・ランデヴ/トウキョウ・シャンディ・ランデヴ.mp3",
-    "cover": "assets/game/トウキョウ・シャンディ・ランデヴ/トウキョウ・シャンディ・ランデヴ.png"
+    "cover": "assets/game/トウキョウ・シャンディ・ランデヴ/トウキョウ・シャンディ・ランデヴ.png"
   },
   {
     "title": "トーキョー・ウィンター・ミュージック",
     "audio": "assets/game/トーキョー・ウィンター・ミュージック/トーキョー・ウィンター・ミュージック.mp3",
-    "cover": "assets/game/トーキョー・ウィンター・ミュージック/トーキョー・ウィンター・ミュージック.png"
+    "cover": "assets/game/トーキョー・ウィンター・ミュージック/トーキョー・ウィンター・ミュージック.png"
   },
   {
     "title": "ナツのキオクのナイショのホンネ！",
@@ -677,22 +677,22 @@ const SONG_QUIZ_DATA = [
   {
     "title": "バブリック・ビューイング！",
     "audio": "assets/game/バブリック・ビューイング！/バブリック・ビューイング！.mp3",
-    "cover": "assets/game/バブリック・ビューイング！/バブリック・ビューイング！.png"
+    "cover": "assets/game/バブリック・ビューイング！/バブリック・ビューイング！.png"
   },
   {
     "title": "パーティー・ジョーク・シンデレラ",
     "audio": "assets/game/パーティー・ジョーク・シンデレラ/パーティー・ジョーク・シンデレラ.mp3",
-    "cover": "assets/game/パーティー・ジョーク・シンデレラ/パーティー・ジョーク・シンデレラ.png"
+    "cover": "assets/game/パーティー・ジョーク・シンデレラ/パーティー・ジョーク・シンデレラ.png"
   },
   {
     "title": "ハオダー？ハオアー！-好的？好啊！-",
     "audio": "assets/game/ハオダー？ハオアー！-好的？好啊！-/ハオダー？ハオアー！-好的？好啊！-.mp3",
-    "cover": "assets/game/ハオダー？ハオアー！-好的？好啊！-/ハオダー？ハオアー！-好的？好啊！-.png"
+    "cover": "assets/game/ハオダー？ハオアー！-好的？好啊！-/ハオダー？ハオアー！-好的？好啊！-.png"
   },
   {
     "title": "ハチメンロッピング！",
     "audio": "assets/game/ハチメンロッピング！/ハチメンロッピング！.mp3",
-    "cover": "assets/game/ハチメンロッピング！/ハチメンロッピング！.png"
+    "cover": "assets/game/ハチメンロッピング！/ハチメンロッピング！.png"
   },
   {
     "title": "ハロー・マイ・ロケット",
@@ -702,27 +702,27 @@ const SONG_QUIZ_DATA = [
   {
     "title": "ハートフル・レシピ",
     "audio": "assets/game/ハートフル・レシピ/ハートフル・レシピ.mp3",
-    "cover": "assets/game/ハートフル・レシピ/ハートフル・レシピ.png"
+    "cover": "assets/game/ハートフル・レシピ/ハートフル・レシピ.png"
   },
   {
     "title": "ビビデバ",
     "audio": "assets/game/ビビデバ/ビビデバ.mp3",
-    "cover": "assets/game/ビビデバ/ビビデバ.png"
+    "cover": "assets/game/ビビデバ/ビビデバ.png"
   },
   {
     "title": "プラネタリウム・レヴュー",
     "audio": "assets/game/プラネタリウム・レヴュー/プラネタリウム・レヴュー.mp3",
-    "cover": "assets/game/プラネタリウム・レヴュー/プラネタリウム・レヴュー.png"
+    "cover": "assets/game/プラネタリウム・レヴュー/プラネタリウム・レヴュー.png"
   },
   {
     "title": "プリズム△▽リズム",
     "audio": "assets/game/プリズム△▽リズム/プリズム△▽リズム.mp3",
-    "cover": "assets/game/プリズム△▽リズム/プリズム△▽リズム.png"
+    "cover": "assets/game/プリズム△▽リズム/プリズム△▽リズム.png"
   },
   {
     "title": "プレイ・マイ・フェイバリット！！",
     "audio": "assets/game/プレイ・マイ・フェイバリット！！/プレイ・マイ・フェイバリット！！.mp3",
-    "cover": "assets/game/プレイ・マイ・フェイバリット！！/プレイ・マイ・フェイバリット！！.png"
+    "cover": "assets/game/プレイ・マイ・フェイバリット！！/プレイ・マイ・フェイバリット！！.png"
   },
   {
     "title": "ファンサ",
@@ -737,7 +737,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "フタリノスタルジア",
     "audio": "assets/game/フタリノスタルジア/フタリノスタルジア.mp3",
-    "cover": "assets/game/フタリノスタルジア/フタリノスタルジア.png"
+    "cover": "assets/game/フタリノスタルジア/フタリノスタルジア.png"
   },
   {
     "title": "フレーフレー・ファンファーレ！",
@@ -747,17 +747,17 @@ const SONG_QUIZ_DATA = [
   {
     "title": "ホシシズク",
     "audio": "assets/game/ホシシズク/ホシシズク.mp3",
-    "cover": "assets/game/ホシシズク/ホシシズク.png"
+    "cover": "assets/game/ホシシズク/ホシシズク.png"
   },
   {
     "title": "マイ・ピクチャー・ストーリー",
     "audio": "assets/game/マイ・ピクチャー・ストーリー/マイ・ピクチャー・ストーリー.mp3",
-    "cover": "assets/game/マイ・ピクチャー・ストーリー/マイ・ピクチャー・ストーリー.png"
+    "cover": "assets/game/マイ・ピクチャー・ストーリー/マイ・ピクチャー・ストーリー.png"
   },
   {
     "title": "マッピング・マイ・ワールド",
     "audio": "assets/game/マッピング・マイ・ワールド/マッピング・マイ・ワールド.mp3",
-    "cover": "assets/game/マッピング・マイ・ワールド/マッピング・マイ・ワールド.png"
+    "cover": "assets/game/マッピング・マイ・ワールド/マッピング・マイ・ワールド.png"
   },
   {
     "title": "マン・ハン・チュエンシー!!",
@@ -772,12 +772,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "ミックス・アップ・インタレスト！",
     "audio": "assets/game/ミックス・アップ・インタレスト！/ミックス・アップ・インタレスト！.mp3",
-    "cover": "assets/game/ミックス・アップ・インタレスト！/ミックス・アップ・インタレスト！.png"
+    "cover": "assets/game/ミックス・アップ・インタレスト！/ミックス・アップ・インタレスト！.png"
   },
   {
     "title": "リアルタイム・リプライ！",
     "audio": "assets/game/リアルタイム・リプライ！/リアルタイム・リプライ！.mp3",
-    "cover": "assets/game/リアルタイム・リプライ！/リアルタイム・リプライ！.png"
+    "cover": "assets/game/リアルタイム・リプライ！/リアルタイム・リプライ！.png"
   },
   {
     "title": "リライト",
@@ -787,7 +787,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "レイドバックジャーニー",
     "audio": "assets/game/レイドバックジャーニー/レイドバックジャーニー.mp3",
-    "cover": "assets/game/レイドバックジャーニー/レイドバックジャーニー.png"
+    "cover": "assets/game/レイドバックジャーニー/レイドバックジャーニー.png"
   },
   {
     "title": "ロマンスの神様",
@@ -797,27 +797,27 @@ const SONG_QUIZ_DATA = [
   {
     "title": "ワナビスタ！",
     "audio": "assets/game/ワナビスタ！/ワナビスタ！.mp3",
-    "cover": "assets/game/ワナビスタ！/ワナビスタ！.png"
+    "cover": "assets/game/ワナビスタ！/ワナビスタ！.png"
   },
   {
     "title": "ワンダフル・フラワー・ガーデン！",
     "audio": "assets/game/ワンダフル・フラワー・ガーデン！/ワンダフル・フラワー・ガーデン！.mp3",
-    "cover": "assets/game/ワンダフル・フラワー・ガーデン！/ワンダフル・フラワー・ガーデン！.png"
+    "cover": "assets/game/ワンダフル・フラワー・ガーデン！/ワンダフル・フラワー・ガーデン！.png"
   },
   {
     "title": "ワールドダイスター！",
     "audio": "assets/game/ワールドダイスター！/ワールドダイスター！.mp3",
-    "cover": "assets/game/ワールドダイスター！/ワールドダイスター！.png"
+    "cover": "assets/game/ワールドダイスター！/ワールドダイスター！.png"
   },
   {
     "title": "ヱテルナ・ガラクシア",
     "audio": "assets/game/ヱテルナ・ガラクシア/ヱテルナ・ガラクシア.mp3",
-    "cover": "assets/game/ヱテルナ・ガラクシア/ヱテルナ・ガラクシア.png"
+    "cover": "assets/game/ヱテルナ・ガラクシア/ヱテルナ・ガラクシア.png"
   },
   {
     "title": "不可逆的運命ディストピア",
     "audio": "assets/game/不可逆的運命ディストピア/不可逆的運命ディストピア.mp3",
-    "cover": "assets/game/不可逆的運命ディストピア/不可逆的運命ディストピア.png"
+    "cover": "assets/game/不可逆的運命ディストピア/不可逆的運命ディストピア.png"
   },
   {
     "title": "五条大橋の妖しき化生",
@@ -827,12 +827,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "光線チューニング",
     "audio": "assets/game/光線チューニング/光線チューニング.mp3",
-    "cover": "assets/game/光線チューニング/光線チューニング.png"
+    "cover": "assets/game/光線チューニング/光線チューニング.png"
   },
   {
     "title": "八躯モ断ツ剣ノ傍デ",
     "audio": "assets/game/八躯モ断ツ剣ノ傍デ/八躯モ断ツ剣ノ傍デ.mp3",
-    "cover": "assets/game/八躯モ断ツ剣ノ傍デ/八躯モ断ツ剣ノ傍デ.png"
+    "cover": "assets/game/八躯モ断ツ剣ノ傍デ/八躯モ断ツ剣ノ傍デ.png"
   },
   {
     "title": "六兆年と一夜物語",
@@ -852,7 +852,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "可愛くてごめん",
     "audio": "assets/game/可愛くてごめん/可愛くてごめん.mp3",
-    "cover": "assets/game/可愛くてごめん/可愛くてごめん.png"
+    "cover": "assets/game/可愛くてごめん/可愛くてごめん.png"
   },
   {
     "title": "史上最幸NEW YEAR!",
@@ -872,7 +872,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "君というメソッドへ",
     "audio": "assets/game/君というメソッドへ/君というメソッドへ.mp3",
-    "cover": "assets/game/君というメソッドへ/君というメソッドへ.png"
+    "cover": "assets/game/君というメソッドへ/君というメソッドへ.png"
   },
   {
     "title": "変わらないもの",
@@ -917,12 +917,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "幾億の星の空で",
     "audio": "assets/game/幾億の星の空で/幾億の星の空で.mp3",
-    "cover": "assets/game/幾億の星の空で/幾億の星の空で.png"
+    "cover": "assets/game/幾億の星の空で/幾億の星の空で.png"
   },
   {
     "title": "強風オールバック",
     "audio": "assets/game/強風オールバック/強風オールバック.mp3",
-    "cover": "assets/game/強風オールバック/強風オールバック.png"
+    "cover": "assets/game/強風オールバック/強風オールバック.png"
   },
   {
     "title": "心という名の不可解",
@@ -932,7 +932,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "忘れじの言の葉",
     "audio": "assets/game/忘れじの言の葉/忘れじの言の葉.mp3",
-    "cover": "assets/game/忘れじの言の葉/忘れじの言の葉.png"
+    "cover": "assets/game/忘れじの言の葉/忘れじの言の葉.png"
   },
   {
     "title": "怪物",
@@ -957,27 +957,27 @@ const SONG_QUIZ_DATA = [
   {
     "title": "情熱リベレイション",
     "audio": "assets/game/情熱リベレイション/情熱リベレイション.mp3",
-    "cover": "assets/game/情熱リベレイション/情熱リベレイション.png"
+    "cover": "assets/game/情熱リベレイション/情熱リベレイション.png"
   },
   {
     "title": "惑う星達のダンスホール",
     "audio": "assets/game/惑う星達のダンスホール/惑う星達のダンスホール.mp3",
-    "cover": "assets/game/惑う星達のダンスホール/惑う星達のダンスホール.png"
+    "cover": "assets/game/惑う星達のダンスホール/惑う星達のダンスホール.png"
   },
   {
     "title": "想い出はリタルダンド",
     "audio": "assets/game/想い出はリタルダンド/想い出はリタルダンド.mp3",
-    "cover": "assets/game/想い出はリタルダンド/想い出はリタルダンド.png"
+    "cover": "assets/game/想い出はリタルダンド/想い出はリタルダンド.png"
   },
   {
     "title": "愛に生きる喜びを",
     "audio": "assets/game/愛に生きる喜びを/愛に生きる喜びを.mp3",
-    "cover": "assets/game/愛に生きる喜びを/愛に生きる喜びを.png"
+    "cover": "assets/game/愛に生きる喜びを/愛に生きる喜びを.png"
   },
   {
     "title": "愛包ダンスホール",
     "audio": "assets/game/愛包ダンスホール/愛包ダンスホール.mp3",
-    "cover": "assets/game/愛包ダンスホール/愛包ダンスホール.png"
+    "cover": "assets/game/愛包ダンスホール/愛包ダンスホール.png"
   },
   {
     "title": "撩乱乙女†無双劇",
@@ -992,12 +992,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "星めぐり、果ての君へ。",
     "audio": "assets/game/星めぐり、果ての君へ。/星めぐり、果ての君へ。.mp3",
-    "cover": "assets/game/星めぐり、果ての君へ。/星めぐり、果ての君へ。.png"
+    "cover": "assets/game/星めぐり、果ての君へ。/星めぐり、果ての君へ。.png"
   },
   {
     "title": "春を告げる",
     "audio": "assets/game/春を告げる/春を告げる.mp3",
-    "cover": "assets/game/春を告げる/春を告げる.png"
+    "cover": "assets/game/春を告げる/春を告げる.png"
   },
   {
     "title": "暁星アストレーション",
@@ -1017,7 +1017,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "水際PARTY、水着でFUNNY",
     "audio": "assets/game/水際PARTY、水着でFUNNY/水際PARTY、水着でFUNNY.mp3",
-    "cover": "assets/game/水際PARTY、水着でFUNNY/水際PARTY、水着でFUNNY.png"
+    "cover": "assets/game/水際PARTY、水着でFUNNY/水際PARTY、水着でFUNNY.png"
   },
   {
     "title": "氷雨に舞う火の鳥",
@@ -1052,7 +1052,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "空っぽのギフトボックス",
     "audio": "assets/game/空っぽのギフトボックス/空っぽのギフトボックス.mp3",
-    "cover": "assets/game/空っぽのギフトボックス/空っぽのギフトボックス.png"
+    "cover": "assets/game/空っぽのギフトボックス/空っぽのギフトボックス.png"
   },
   {
     "title": "粛聖!!ロリ神レクイエム☆",
@@ -1067,12 +1067,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "絆はずっとGrowing Up!!!",
     "audio": "assets/game/絆はずっとGrowing Up!!!/絆はずっとGrowing Up!!!.mp3",
-    "cover": "assets/game/絆はずっとGrowing Up!!!/絆はずっとGrowing Up!!!.png"
+    "cover": "assets/game/絆はずっとGrowing Up!!!/絆はずっとGrowing Up!!!.png"
   },
   {
     "title": "絶対！ニーデリッヒ宣言♡",
     "audio": "assets/game/絶対！ニーデリッヒ宣言♡/絶対！ニーデリッヒ宣言♡.mp3",
-    "cover": "assets/game/絶対！ニーデリッヒ宣言♡/絶対！ニーデリッヒ宣言♡.png"
+    "cover": "assets/game/絶対！ニーデリッヒ宣言♡/絶対！ニーデリッヒ宣言♡.png"
   },
   {
     "title": "色即是空卍Trick is Treat！",
@@ -1082,7 +1082,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "花と、雪と、ドラムンベース。",
     "audio": "assets/game/花と、雪と、ドラムンベース。/花と、雪と、ドラムンベース。.mp3",
-    "cover": "assets/game/花と、雪と、ドラムンベース。/花と、雪と、ドラムンベース。.png"
+    "cover": "assets/game/花と、雪と、ドラムンベース。/花と、雪と、ドラムンベース。.png"
   },
   {
     "title": "蜃気楼の向こう側、君は笑ってくれるかな",
@@ -1102,7 +1102,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "誰ガ為ノサダメ",
     "audio": "assets/game/誰ガ為ノサダメ/誰ガ為ノサダメ.mp3",
-    "cover": "assets/game/誰ガ為ノサダメ/誰ガ為ノサダメ.png"
+    "cover": "assets/game/誰ガ為ノサダメ/誰ガ為ノサダメ.png"
   },
   {
     "title": "賭世遊戯",
@@ -1127,7 +1127,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "錆びついた胸に一雫の心を",
     "audio": "assets/game/錆びついた胸に一雫の心を/錆びついた胸に一雫の心を.mp3",
-    "cover": "assets/game/錆びついた胸に一雫の心を/錆びついた胸に一雫の心を.png"
+    "cover": "assets/game/錆びついた胸に一雫の心を/錆びついた胸に一雫の心を.png"
   },
   {
     "title": "開運御礼初詣!",
@@ -1142,7 +1142,7 @@ const SONG_QUIZ_DATA = [
   {
     "title": "雨に願えば",
     "audio": "assets/game/雨に願えば/雨に願えば.mp3",
-    "cover": "assets/game/雨に願えば/雨に願えば.png"
+    "cover": "assets/game/雨に願えば/雨に願えば.png"
   },
   {
     "title": "雪は春に、そして花束を",
@@ -1152,12 +1152,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "電脳スペクタクル",
     "audio": "assets/game/電脳スペクタクル/電脳スペクタクル.mp3",
-    "cover": "assets/game/電脳スペクタクル/電脳スペクタクル.png"
+    "cover": "assets/game/電脳スペクタクル/電脳スペクタクル.png"
   },
   {
     "title": "青春サイダー",
     "audio": "assets/game/青春サイダー/青春サイダー.mp3",
-    "cover": "assets/game/青春サイダー/青春サイダー.png"
+    "cover": "assets/game/青春サイダー/青春サイダー.png"
   },
   {
     "title": "青空Jumping Heart",
@@ -1167,12 +1167,12 @@ const SONG_QUIZ_DATA = [
   {
     "title": "非対称性のダンス",
     "audio": "assets/game/非対称性のダンス/非対称性のダンス.mp3",
-    "cover": "assets/game/非対称性のダンス/非対称性のダンス.png"
+    "cover": "assets/game/非対称性のダンス/非対称性のダンス.png"
   },
   {
     "title": "革命ダンス",
     "audio": "assets/game/革命ダンス/革命ダンス.mp3",
-    "cover": "assets/game/革命ダンス/革命ダンス.png"
+    "cover": "assets/game/革命ダンス/革命ダンス.png"
   },
   {
     "title": "魔法のラストノート",
